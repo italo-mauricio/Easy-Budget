@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <h1>Hello {newName}</h1>
       <p>Soma: {soma(1, 2)}</p>
       <img src={url} alt="My Image" />
+      <Hello />
     </div>
   );
 }
