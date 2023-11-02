@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Switch, Routes, Route, Container, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Company from './pages/Company';
 import Contact from './pages/Contact';
 import NewProject from './pages/NewProject';
+import Container from './components/layout/Container';
 
 
 function App() {
@@ -14,12 +15,14 @@ function App() {
         <Link to='/company'>Empresa</Link>
         <Link to='/newproject'>Novo Projeto</Link>
       </div>
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/company' element={<Company />} />
-        <Route exact path='/contact' element={<Contact />} />
-        <Route exact path='/newproject' element={<NewProject />} />
-      </Routes>
+      <Container>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/company' element={<Company />} />
+          <Route exact path='/contact' element={<Contact />} />
+          <Route exact path='/newproject' element={<NewProject />} />
+        </Routes>
+      </Container>
       <footer>Footer</footer>
     </Router>
   );
